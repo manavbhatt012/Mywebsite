@@ -9,45 +9,24 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- link the main js file -->
     <script type="module" src="js/app.js" defer></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+</style>
+
+
 </head>
 <body>
-        <!-- ai2html -->
-        <section class="ai2html">
-            <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                <!-- This is the line that matters for import -->
-                <%- include('./ai2html-output/ai2html-test.ejs'); %>
-                </div>
+
+       <!-- ai2html -->
+       <section class="ai2html">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+            <!-- This is the line that matters for import -->
+            <%- include('./ai2html-output/ai2html-test.ejs'); %>
             </div>
-            </div>
-        </section>
-
-        <!-- scrolly -->
-        <section id="doge-scrolly">
-
-        <!-- define the scroll sections -->
-        <% const blocks=
-            [
-            { 
-                "filename" : "doge_1" , 
-                "anno" : "_blank-slide_" 
-            }, 
-            { 
-                "filename" : "doge_2" , 
-                "anno": "The Dogefather"
-            },
-                    { 
-                "filename" : "doge_3" , 
-                "anno": "<div class='h5 fw-bold'> Doge Title </div> Much Doge Such Wow" 
-                }
-            ] 
-        %>
-        <!-- every { filename, anno } object makes a new section -->
-
-        <!-- include the component -->
-        <%- include('./scrolly/scrolly.ejs', {id: "doge-scrolly" , blocks: blocks }); %>
-        
-        </section>
+        </div>
+        </div>
+      </section>
 </body>
 </html>
